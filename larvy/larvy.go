@@ -14,7 +14,7 @@ type Larvy struct {
 func (l *Larvy) New(rootPath string) error {
 	pathConfig := initPaths{
 		rootPath:    rootPath,
-		folderNames: []string{"handlers", "migrations", "views", "data", "public", "tmp", "logs", "middlewares"},
+		folderNames: []string{"handlers", "migrations", "views", "data", "public", "temp", "logs", "middlewares"},
 	}
 
 	if err := l.Init(pathConfig); err != nil {

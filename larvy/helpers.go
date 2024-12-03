@@ -6,7 +6,7 @@ import "os"
 func (l *Larvy) CreateDirIfNotExist(path string) error {
 	const mode = 0755
 	if _, err := os.Stat(path); os.IsNotExist(err) {
-		os.Mkdir(path, mode)
+		err := os.Mkdir(path, mode)
 		if err != nil {
 			return err
 		}
